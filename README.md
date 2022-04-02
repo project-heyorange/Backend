@@ -3,10 +3,11 @@
 
 <div>
   <h2>Sumário</h2>
-  <a>1. Sobre o Projeto</a><br>
-  <a>2. Tecnologias Utilizadas</a><br>
-  <a>3. Funcionalidades</a><br>
-  <a>4. Como utilizar</a><br>
+  <a>1. Sobre o Projeto</a>  
+  
+  <a>2. Tecnologias Utilizadas</a>  
+  <a>3. Funcionalidades</a>  
+  <a>4. Como utilizar</a>
   <a>5. Autores</a>
 </div>
 
