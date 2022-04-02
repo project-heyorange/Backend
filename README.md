@@ -1,38 +1,42 @@
 <h1 align="center">HeyOrange 🍊</h1>
-<h5 align="center">Backend do Projeto HeyOrange, desenvolvido pelo SQUAD 32, para o Hackaton do Programa de Formação da FCâmara.</h5>
+<h5 align="center">BackEnd do Projeto HeyOrange, desenvolvido pelo SQUAD 32, para o Hackaton do Programa de Formação da FCamara.</h5>
 
+
+## :mega: Sumário
 <div>
-  <h2>Sumário</h2>
   <a>1. Sobre o Projeto</a>  
   
   <a>2. Tecnologias Utilizadas</a>  
   <a>3. Funcionalidades</a>  
-  <a>4. Como utilizar</a>  
+  <a>4. Como utilizar</a> 
   <a>5. Autores</a>
 </div>
 
-<div>
-<h2>Tecnologias Utilizadas</h2>
-  Spingboot? Java?
-  
-</div>
 
-<div>
-<h2>Funcionalidades</h2>
+## :memo: Sobre o Projeto
+
+## :floppy_disk: Tecnologias Utilizadas
+pegar badges das tecnologias aqui: https://github.com/Ileriayo/markdown-badges#badges
+  
+
+
+
+## :bulb: Funcionalidades
   *O que o nosso backend faz?
   
-</div>
 
-<div>
-<h2>Como utilizar</h2>
+
+
+## :pushpin: Como utilizar o projeto
   *Colocar prints de comandos, pra melhor visualização
   
-</div>
 
-<div>
-<h2>Autores</h2>
-  *autores reponsaveis pelo backend
+
+
+## :computer: Desenvolvedores
+|_Alexandre Lucca_|_Isadora Hoelscher_|_Joyce Caroline_|_Ruan Dias_|
+|---|---|---|---|
+|<img src="https://github.com/alexamorim17.png" width="140">|<img src="https://github.com/isahoelscher.png" width="140">|<img src="https://github.com/joyce-caroline.png" width="140">|<img src="https://github.com/ruandias.png" width="140">
   
-</div>
 
 
