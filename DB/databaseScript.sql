@@ -232,3 +232,72 @@ CONSTRAINT `FK_MENTORIA_HISTORICO_MENTORIA` FOREIGN KEY (`ID_MENTORIA`)
 REFERENCES `MENTORIA` (`ID`)
 );
 
+
+INSERT INTO HEYORANGE.DOMINIO_TIPO_USUARIO
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('admin', 1, 1),
+    ('user', 1, 2)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_STATUS_USUARIO
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('ativo', 1, 1),
+    ('bloqueado', 1, 2),
+    ('inativo', 1, 3)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_STATUS_MENTORIA
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('agendada', 1, 1),
+    ('confirmada', 1, 2),
+    ('cancelada', 1, 3)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_TIPO_EMAIL
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('aviso', 1, 1),
+    ('convite mentoria', 1, 2),
+    ('notificacao de aceite', 1, 3)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_HABILIDADES
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('especialista em Springboot', 1, 1),
+    ('especialista em API', 1, 2),
+    ('especialista em Burnout', 1, 3)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_NIVEL_EXPERIENCIA
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('Trainee', 1, 1),
+    ('Junior', 1, 2),
+    ('Pleno', 1, 3),
+    ('Senior', 1, 4)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_TIPO_ACAO
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('create', 1, 1),
+    ('update', 1, 2),
+    ('delete', 1, 3)
+;
+
+INSERT INTO HEYORANGE.DOMINIO_TIPO_MENTORIA
+(DESCRICAO, FLAG_ATIVO, NUMERO_ORDEM)
+VALUES
+    ('bate papo', 1, 1),
+    ('mentoria', 1, 2),
+    ('ajuda em algum problema', 1, 3)
+;
+
+
+
+
+
