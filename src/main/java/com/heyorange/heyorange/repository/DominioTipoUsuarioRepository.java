@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.heyorange.heyorange.entity.DominioTipoUsuario;
 
 @Repository
-public interface DominioTipoUsuarioRepository extends JpaRepository<DominioTipoUsuario,Long>{
-	
+public interface DominioTipoUsuarioRepository extends JpaRepository<DominioTipoUsuario, Long> {
+
 }

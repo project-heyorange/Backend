@@ -24,7 +24,7 @@ import lombok.Setter;
 public class HabilidadeDesejada extends AbstractEntity<Long> {
 	@Column(name = "ID_DOMINIO_HABILIDADES")
 	private int idDominioHabilidades;
-	
+
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ID_MENTORADO", referencedColumnName = "ID")
 	private Mentorado mentorado;

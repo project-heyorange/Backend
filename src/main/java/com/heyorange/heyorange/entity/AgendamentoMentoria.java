@@ -1,6 +1,5 @@
 package com.heyorange.heyorange.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -30,6 +29,5 @@ public class AgendamentoMentoria extends AbstractEntity<Long> {
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ID_CONFIRMACAO_MENTORIA", referencedColumnName = "ID")
 	private ConfirmacaoMentoria confirmacaoMentoria;
-
 
 }

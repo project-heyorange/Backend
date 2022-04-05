@@ -1,7 +1,7 @@
 package com.heyorange.heyorange.constants;
 
-import lombok.NoArgsConstructor;
 import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DatabaseConstants {

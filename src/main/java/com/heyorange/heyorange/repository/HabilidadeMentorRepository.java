@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.heyorange.heyorange.entity.HabilidadeMentor;
 
 @Repository
-public interface HabilidadeMentorRepository extends JpaRepository<HabilidadeMentor,Long>{
-	
+public interface HabilidadeMentorRepository extends JpaRepository<HabilidadeMentor, Long> {
+
 }

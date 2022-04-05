@@ -10,7 +10,6 @@ import javax.persistence.Table;
 
 import com.heyorange.heyorange.constants.DatabaseConstants;
 
-
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Table(schema = DatabaseConstants.HEY_ORANGE, name = "MENTOR")
 public class Mentor extends AbstractEntity<Long> {
-	
+
 	@Lob
 	@Column(name = "FOTO")
 	private byte[] foto;
@@ -35,6 +34,5 @@ public class Mentor extends AbstractEntity<Long> {
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ID_PESSOA", referencedColumnName = "ID")
 	private Pessoa pessoa;
-
 
 }

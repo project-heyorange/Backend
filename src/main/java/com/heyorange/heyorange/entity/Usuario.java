@@ -15,18 +15,17 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @Entity
 @Table(schema = DatabaseConstants.HEY_ORANGE, name = "USUARIO")
-public class Usuario extends AbstractEntity<Long>{
-	
+public class Usuario extends AbstractEntity<Long> {
+
 	@Column(name = "NOME")
 	private String nome;
-	
+
 	@Column(name = "SENHA")
 	private String senha;
 

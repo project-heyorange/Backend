@@ -26,5 +26,4 @@ public class HabilidadeItem extends AbstractEntity<Long> {
 	@Column(name = "ID_DOMINIO_NIVEL_EXPERIENCIA")
 	private int idDominioNivelExperiencia;
 
-
 }

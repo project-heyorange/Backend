@@ -4,8 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.heyorange.heyorange.entity.EnvioEmail;
+
 @Repository
-public interface EnvioEmailRepository extends JpaRepository<EnvioEmail,Long>{
-	
+public interface EnvioEmailRepository extends JpaRepository<EnvioEmail, Long> {
 
 }

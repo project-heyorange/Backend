@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.heyorange.heyorange.entity.AbstractEntity;
 
 @Repository
-public interface AbstractEntityRepository extends JpaRepository <AbstractEntity,Long> {
+public interface AbstractEntityRepository extends JpaRepository<AbstractEntity, Long> {
 
 }

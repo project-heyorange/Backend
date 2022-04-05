@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.heyorange.heyorange.entity.HistoricoMentoria;
 
 @Repository
-public interface HistoricoMentoriaRepository extends JpaRepository<HistoricoMentoria,Long>{
+public interface HistoricoMentoriaRepository extends JpaRepository<HistoricoMentoria, Long> {
 
 }

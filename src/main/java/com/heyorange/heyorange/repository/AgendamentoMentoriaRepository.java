@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.heyorange.heyorange.entity.AgendamentoMentoria;
 
 @Repository
-public interface AgendamentoMentoriaRepository extends JpaRepository <AgendamentoMentoria,Long> {
+public interface AgendamentoMentoriaRepository extends JpaRepository<AgendamentoMentoria, Long> {
 
 }

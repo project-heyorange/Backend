@@ -22,10 +22,10 @@ public class EnvioEmail extends AbstractEntity<Long> {
 
 	@Column(name = "TITULO")
 	private String titulo;
-	
+
 	@Column(name = "ASSUNTO")
 	private String assunto;
-	
+
 	@Column(name = "CONTEUDO")
 	private String conteudo;
 
@@ -34,6 +34,5 @@ public class EnvioEmail extends AbstractEntity<Long> {
 
 	@Column(name = "ID_DOMINIO_TIPO_EMAIL")
 	private int idDominioTipoEmail;
-
 
 }
