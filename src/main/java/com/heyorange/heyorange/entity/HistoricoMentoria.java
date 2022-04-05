@@ -2,6 +2,9 @@ package com.heyorange.heyorange.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.heyorange.heyorange.constants.DatabaseConstants;
@@ -21,11 +24,13 @@ import lombok.Setter;
 @Table(schema = DatabaseConstants.HEY_ORANGE, name = "HISTORICO_MENTORIA")
 public class HistoricoMentoria extends AbstractEntity<Long> {
 
-	@Column(name = "ID_HISTORICO")
-	private int _idHistorico;
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ID_HISTORICO", referencedColumnName = "ID")
+	private Historico historico;
 	
-	@Column(name = "ID_MENTORIA")
-	private int _idMentoria;
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ID_MENTORIA", referencedColumnName = "ID")
+	private Mentoria mentoria;
 
 
 }

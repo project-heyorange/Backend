@@ -14,7 +14,7 @@ import lombok.AccessLevel;
 @Builder
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @Entity
-@Table(schema = DatabaseConstants.HEY_ORANGE, name = "DOMIBIO_NIVEL_EXPERIENCIA")
+@Table(schema = DatabaseConstants.HEY_ORANGE, name = "DOMINIO_NIVEL_EXPERIENCIA")
 public class DominioNivelExperiencia extends AbstractDominio <Long> {
 	
 }

@@ -2,7 +2,10 @@ package com.heyorange.heyorange.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.heyorange.heyorange.constants.DatabaseConstants;
@@ -29,8 +32,9 @@ public class Mentorado extends AbstractEntity<Long> {
 	@Column(name = "DESCRICAO_EXPERIENCIA")
 	private String descricaoExperiencia;
 
-	@Column(name = "ID_PESSOA")
-	private int idPessoa;
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ID_PESSOA", referencedColumnName = "ID")
+	private Pessoa pessoa;
 
 
 }
