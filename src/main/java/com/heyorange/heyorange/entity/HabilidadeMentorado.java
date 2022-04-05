@@ -1,6 +1,5 @@
 package com.heyorange.heyorange.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -24,12 +23,11 @@ import lombok.Setter;
 public class HabilidadeMentorado extends AbstractEntity<Long> {
 
 	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "ID_HABILIDADE_ITEM", referencedColumnName = "ID")	
+	@JoinColumn(name = "ID_HABILIDADE_ITEM", referencedColumnName = "ID")
 	private HabilidadeItem habilidadeItem;
 
 	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "ID_MENTORADO", referencedColumnName = "ID")	
+	@JoinColumn(name = "ID_MENTORADO", referencedColumnName = "ID")
 	private Mentorado mentorado;
-
 
 }

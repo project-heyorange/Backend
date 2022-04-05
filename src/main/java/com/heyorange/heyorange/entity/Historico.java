@@ -8,7 +8,6 @@ import javax.persistence.Table;
 
 import com.heyorange.heyorange.constants.DatabaseConstants;
 
-
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,6 +36,5 @@ public class Historico extends AbstractEntity<Long> {
 
 	@Column(name = "ID_DOMINIO_TIPO_ACAO")
 	private int idDominioTipoAcao;
-
 
 }
