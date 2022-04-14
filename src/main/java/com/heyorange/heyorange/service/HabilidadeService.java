@@ -5,9 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.heyorange.heyorange.domain.entity.DominioHabilidades;
 import com.heyorange.heyorange.domain.entity.HabilidadeDesejada;
 import com.heyorange.heyorange.domain.entity.HabilidadeMentor;
 import com.heyorange.heyorange.domain.entity.HabilidadeMentorado;
+import com.heyorange.heyorange.repository.DominioHabilidadesRepository;
 import com.heyorange.heyorange.repository.HabilidadeDesejadaRepository;
 import com.heyorange.heyorange.repository.HabilidadeMentorRepository;
 import com.heyorange.heyorange.repository.HabilidadeMentoradoRepository;
@@ -23,6 +25,9 @@ public class HabilidadeService {
 
 	@Autowired
 	private HabilidadeMentorRepository habilidadeMentorRepository;
+
+	@Autowired
+	private DominioHabilidadesRepository dominioHabilidadeRepository;
 
 	public HabilidadeDesejada findByHabilidadeDesejadaId(final Long id) {
 
@@ -67,5 +72,10 @@ public class HabilidadeService {
 	public HabilidadeMentorado saveAndFlushMentorado(final HabilidadeMentorado habilidade) {
 
 		return habilidadeMentoradoRepository.saveAndFlush(habilidade);
+	}
+
+	public List<DominioHabilidades> listarHabilidadesCadastradas() {
+
+		return dominioHabilidadeRepository.findAll();
 	}
 }

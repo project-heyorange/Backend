@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.heyorange.heyorange.domain.entity.HabilidadeDesejada;
 import com.heyorange.heyorange.domain.entity.Mentorado;
 import com.heyorange.heyorange.domain.vo.HabilidadeDesejadaVO;
+import com.heyorange.heyorange.exception.NotFoundException;
 import com.heyorange.heyorange.repository.HabilidadeDesejadaRepository;
 import com.heyorange.heyorange.repository.MentoradoRepository;
 
@@ -29,25 +30,39 @@ public class MentoradoService {
 	}
 
 	public void create(@Valid HabilidadeDesejadaVO habilidadeDesejadaVO, Long idMentorado) {
-
 		for (Integer habilidade : habilidadeDesejadaVO.getHabilidades()) {
 
-			HabilidadeDesejada habilidadeDesejada = HabilidadeDesejada.builder().idDominioHabilidades(habilidade).idMentorado(idMentorado).build();
+			HabilidadeDesejada habilidadeDesejada = HabilidadeDesejada //
+					.builder() //
+					.idDominioHabilidades(habilidade) //
+					.idMentorado(idMentorado).build();
 
 			habilidadeDesejadaRepository.saveAndFlush(habilidadeDesejada);
-
 		}
 
 	}
 
-	public Mentorado findById(final Long id) {
+	public Mentorado findById(final Long id) throws NotFoundException {
+		try {
+			return mentoradoRepository.findById(id).get();
+		} catch (Exception e) {
 
-		return mentoradoRepository.findById(id).orElseThrow();
+			throw new NotFoundException();
+		}
 	}
 
 	public List<Mentorado> listarMentorados() {
 
 		return mentoradoRepository.findAll();
+	}
+
+	public Mentorado findByNome(String nome) throws NotFoundException {
+		try {
+			return mentoradoRepository.findByNome(nome).get();
+		} catch (Exception e) {
+
+			throw new NotFoundException();
+		}
 	}
 
 	private Mentorado saveAndFlush(final Mentorado mentorado) {

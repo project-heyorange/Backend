@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.heyorange.heyorange.domain.entity.Mentor;
+import com.heyorange.heyorange.exception.NotFoundException;
 import com.heyorange.heyorange.repository.MentorRepository;
 
 @Service
@@ -20,14 +21,25 @@ public class MentorService {
 
 	}
 
-	public Mentor findById(final Long id) {
-
-		return mentorRepository.findById(id).orElseThrow();
+	public Mentor findById(final Long id) throws NotFoundException {
+		try {
+			return mentorRepository.findById(id).get();
+		} catch (Exception e) {
+			throw new NotFoundException();
+		}
 	}
 
 	public List<Mentor> listaMentores() {
 
 		return mentorRepository.findAll();
+	}
+
+	public Mentor findByNome(String nome) throws NotFoundException {
+		try {
+			return mentorRepository.findByNome(nome).get();
+		} catch (Exception e) {
+			throw new NotFoundException();
+		}
 	}
 
 	private Mentor saveAndFlush(final Mentor mentor) {
