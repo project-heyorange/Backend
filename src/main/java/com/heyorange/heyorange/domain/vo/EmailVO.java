@@ -13,12 +13,15 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MentoriaVO extends AbstractVO<Long> {
-
-	private Integer idMentorado;
-
-	private Integer idMentor;
+public class EmailVO extends AbstractVO<Long> {
 
 	@NotNull
-	private Integer idDominioTipoMentoria;
+	private String para;
+
+	@NotNull
+	private String subject;
+
+	@NotNull
+	private String texto;
+
 }

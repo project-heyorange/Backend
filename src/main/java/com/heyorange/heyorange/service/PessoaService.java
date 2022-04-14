@@ -30,6 +30,11 @@ public class PessoaService {
 		return pessoaRepository.findAll();
 	}
 
+	public Pessoa findByNome(String nome) {
+
+		return pessoaRepository.findByNome(nome).orElseThrow();
+	}
+
 	private Pessoa saveAndFlush(final Pessoa pessoa) {
 
 		return pessoaRepository.saveAndFlush(pessoa);

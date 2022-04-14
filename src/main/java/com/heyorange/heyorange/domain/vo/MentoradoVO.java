@@ -15,7 +15,6 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 public class MentoradoVO extends AbstractVO<Long> {
 
-	@NotNull
 	private Byte[] foto;
 
 	@NotNull

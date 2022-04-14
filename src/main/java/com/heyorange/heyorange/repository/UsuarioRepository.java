@@ -8,8 +8,4 @@ import com.heyorange.heyorange.domain.entity.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-	//	public static List<Usuario> findAllByNomeContainingIgnoreCase(String nome) {
-	//		return null;
-	//	}
-
 }

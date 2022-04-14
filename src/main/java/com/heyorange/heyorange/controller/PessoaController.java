@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,9 +34,17 @@ public class PessoaController extends BaseController {
 
 	@GetMapping("/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public PessoaDTO findById(Long id) {
+	public PessoaDTO findById(@PathVariable("id")Long id) {
 
 		return entityTypeConverter(pessoaService.findById(id), PessoaDTO.class);
+	}
+
+	@GetMapping("/{nome}")
+	@ResponseStatus(HttpStatus.OK)
+	public PessoaDTO findByNome(@PathVariable("nome") String nome) {
+
+		return entityTypeConverter(pessoaService.findByNome(nome), PessoaDTO.class);
+
 	}
 
 }

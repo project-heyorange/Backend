@@ -8,6 +8,7 @@ import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +37,7 @@ public class UsuarioController extends BaseController {
 
 	@GetMapping("/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public UsuarioDTO findById(Long id) {
+	public UsuarioDTO findById(@PathVariable("id") Long id) {
 
 		return entityTypeConverter(usuarioService.findById(id), UsuarioDTO.class);
 	}
@@ -45,7 +46,8 @@ public class UsuarioController extends BaseController {
 	@ResponseStatus(HttpStatus.OK)
 	public List<UsuarioDTO> findAll(Long id) {
 
-		return modelMapper.map(usuarioService.findById(id), new TypeToken<List<UsuarioDTO>>() {}.getType());
+		return modelMapper.map(usuarioService.findById(id), new TypeToken<List<UsuarioDTO>>() {
+		}.getType());
 
 	}
 
