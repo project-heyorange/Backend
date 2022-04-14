@@ -25,8 +25,10 @@ public abstract class AbstractDominio<I extends Serializable> {
 	@Column(name = "ID")
 	protected I id;
 
+	@Column(name = "DESCRICAO")
 	protected String descricao;
 
+	@Column(name = "NUMERO_ORDEM")
 	protected int numeroOrdem;
 
 }
