@@ -8,6 +8,7 @@ import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import com.heyorange.heyorange.domain.dto.IdDTO;
 import com.heyorange.heyorange.domain.dto.MentorDTO;
 import com.heyorange.heyorange.domain.entity.Mentor;
 import com.heyorange.heyorange.domain.vo.MentorVO;
+import com.heyorange.heyorange.exception.NotFoundException;
 import com.heyorange.heyorange.service.MentorService;
 
 @RestController
@@ -36,7 +38,7 @@ public class MentorController extends BaseController {
 
 	@GetMapping("/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public MentorDTO findById(Long id) {
+	public MentorDTO findById(@PathVariable("id") Long id) throws NotFoundException {
 
 		return entityTypeConverter(mentorService.findById(id), MentorDTO.class);
 	}
@@ -45,7 +47,16 @@ public class MentorController extends BaseController {
 	@ResponseStatus(HttpStatus.OK)
 	public List<MentorDTO> findAll(Long id) {
 
-		return modelMapper.map(mentorService.findById(id), new TypeToken<List<MentorDTO>>() {}.getType());
+		return modelMapper.map(mentorService.listaMentores(), new TypeToken<List<MentorDTO>>() {
+		}.getType());
+	}
+
+	@GetMapping("/nome/{nome}")
+	@ResponseStatus(HttpStatus.OK)
+	public MentorDTO findByNome(@PathVariable String nome) throws NotFoundException {
+
+		return entityTypeConverter(mentorService.findByNome(nome), MentorDTO.class);
+
 	}
 
 }
