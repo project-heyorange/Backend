@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.heyorange.heyorange.domain.entity.DominioTipoEmail;
 
 @Repository
-public interface DominioTipoEmailRepository extends JpaRepository<DominioTipoEmail, Long> {}
+public interface DominioTipoEmailRepository extends JpaRepository<DominioTipoEmail, Long> {
+}
