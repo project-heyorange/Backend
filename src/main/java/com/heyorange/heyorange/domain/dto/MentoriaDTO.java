@@ -1,6 +1,9 @@
 package com.heyorange.heyorange.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.heyorange.heyorange.domain.entity.AgendamentoMentoria;
+import com.heyorange.heyorange.domain.entity.HistoricoMentoria;
+import com.heyorange.heyorange.domain.entity.Mentoria;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,4 +24,7 @@ public class MentoriaDTO {
 	private Long idMentor;
 
 	private int idDominioTipoMentoria;
+	
+	private AgendamentoMentoria agendamentoMentoria;
+	
 }

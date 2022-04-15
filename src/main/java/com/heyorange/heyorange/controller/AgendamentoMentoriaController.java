@@ -16,10 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heyorange.heyorange.domain.dto.IdDTO;
 import com.heyorange.heyorange.domain.dto.MentoriaDTO;
-import com.heyorange.heyorange.domain.entity.Mentoria;
-import com.heyorange.heyorange.domain.vo.MentoriaVO;
+import com.heyorange.heyorange.domain.entity.NovaMentoria;
+import com.heyorange.heyorange.domain.vo.NovaMentoriaVO;
 import com.heyorange.heyorange.enumeration.StatusAgendamentoMentoriaEnum;
 import com.heyorange.heyorange.service.MentoriaService;
 
@@ -31,17 +30,16 @@ public class AgendamentoMentoriaController extends BaseController {
 	private MentoriaService mentoriaService;
 
 	@PostMapping("/mentoria")
-	public Long create(@RequestBody @Valid final MentoriaVO mentoriaVO) {
+	public Long criarMentoria(@RequestBody @Valid final NovaMentoriaVO mentoriaVO) {
 
-		return new IdDTO(mentoriaService.create(entityTypeConverter(mentoriaVO, Mentoria.class),
-				StatusAgendamentoMentoriaEnum.AGENDADA)).getId();
+		return mentoriaService.criarMentoriaHorario(mentoriaVO);
 	}
 
 	@GetMapping("/mentoria/{id}")
 	@ResponseStatus(HttpStatus.OK)
-	public MentoriaDTO buscarMentoria(@PathVariable("id") Long id) {
+	public NovaMentoria buscarMentoria(@PathVariable("id") Long id) {
 
-		return entityTypeConverter(mentoriaService.findById(id), MentoriaDTO.class);
+		return mentoriaService.findById(id);
 	}
 
 	@PutMapping("/mentoria/{id}/confirmar")
@@ -58,11 +56,9 @@ public class AgendamentoMentoriaController extends BaseController {
 
 	@GetMapping("/mentoria")
 	@ResponseStatus(HttpStatus.OK)
-	public List<MentoriaDTO> listarTodasMentorias() {
+	public List<NovaMentoria> listarTodasMentorias() {
 
-		return modelMapper.map(mentoriaService.listaMentorias(), new TypeToken<List<MentoriaDTO>>() {
-		}.getType());
-
+		return mentoriaService.listaMentorias();
 	}
 
 	@GetMapping("/mentoria/confirmadas")

@@ -1,10 +1,13 @@
 package com.heyorange.heyorange.domain.entity;
 
-
 import java.sql.Timestamp;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.heyorange.heyorange.constants.DatabaseConstants;
@@ -22,22 +25,16 @@ import lombok.Setter;
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @Entity
-@Table(schema = DatabaseConstants.HEY_ORANGE, name = "HISTORICO")
-public class Historico extends AbstractEntity<Long> {
+@Table(schema = DatabaseConstants.HEY_ORANGE, name = "NOVA_MENTORIA")
+public class NovaMentoria extends AbstractEntity<Long> {
 
-	@Column(name = "DATA_CRIACAO")
-	private Timestamp dataCriacao;
+	@Column(name = "ID_MENTORADO")
+	private Long idMentorado;
 
-	@Column(name = "DATA_ALTERACAO")
-	private Timestamp dataAlteracao;
+	@Column(name = "ID_MENTOR")
+	private Long idMentor;
 
-	@Column(name = "USUARIO_CRIACAO")
-	private String usuarioCriacao;
-
-	@Column(name = "USUARIO_ALTERACAO")
-	private String usuarioAlteracao;
-
-	@Column(name = "ID_DOMINIO_TIPO_ACAO")
-	private int idDominioTipoAcao;
-
+	@Column(name = "DATA_MENTORIA")
+	private Timestamp dataMentoria;
+	
 }

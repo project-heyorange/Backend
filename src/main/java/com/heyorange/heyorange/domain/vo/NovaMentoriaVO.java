@@ -1,6 +1,6 @@
 package com.heyorange.heyorange.domain.vo;
 
-import java.util.List;
+import java.sql.Timestamp;
 
 import javax.validation.constraints.NotNull;
 
@@ -15,23 +15,13 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UsuarioVO extends AbstractVO<Long> {
+public class NovaMentoriaVO extends AbstractVO<Long> {
 
 	@NotNull
-	private String nome;
+	private Long idMentorado;
 
 	@NotNull
-	private String email;
+	private Long idMentor;
 
-	@NotNull
-	private String senha;
-
-	@NotNull
-	private String nivelExperiencia;
-
-	@NotNull
-	private String area;
-
-	private List<String> habilidade;
-
+	private Timestamp hora;
 }

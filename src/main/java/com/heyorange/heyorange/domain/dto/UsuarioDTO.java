@@ -1,5 +1,9 @@
 package com.heyorange.heyorange.domain.dto;
 
+import java.util.List;
+
+import javax.persistence.Column;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -16,16 +20,18 @@ import lombok.experimental.SuperBuilder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UsuarioDTO extends AbstractDTO<Long> {
 
+	private Long id;
+	
 	private String nome;
 
 	private String senha;
-
-	private MentorDTO mentor;
-
-	private MentoradoDTO mentorado;
-
-	private int idDominioStatusUsuario;
-
-	private int idDominioTipoUsuario;
+	
+	private String area;
+	
+	private String nivelExperiencia;
+	
+	private String email;	
+	
+	private List<String> habilidades;
 
 }

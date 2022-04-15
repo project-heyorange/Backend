@@ -30,6 +30,15 @@ public class Usuario extends AbstractEntity<Long> {
 
 	@Column(name = "SENHA")
 	private String senha;
+	
+	@Column(name = "AREA")
+	private String area;
+	
+	@Column(name = "NIVEL_EXPERIENCIA")
+	private String nivelExperiencia;
+	
+	@Column(name = "EMAIL")
+	private String email;	
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "ID_MENTOR", referencedColumnName = "ID")
