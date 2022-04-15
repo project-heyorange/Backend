@@ -1,5 +1,6 @@
 package com.heyorange.heyorange.domain.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -24,11 +25,11 @@ import lombok.Setter;
 @Table(schema = DatabaseConstants.HEY_ORANGE, name = "HISTORICO_MENTORIA")
 public class HistoricoMentoria extends AbstractEntity<Long> {
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "ID_HISTORICO", referencedColumnName = "ID")
 	private Historico historico;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "ID_MENTORIA", referencedColumnName = "ID")
 	private Mentoria mentoria;
 

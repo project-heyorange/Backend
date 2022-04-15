@@ -1,8 +1,5 @@
 package com.heyorange.heyorange.domain.entity;
 
-
-import java.sql.Timestamp;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -22,22 +19,13 @@ import lombok.Setter;
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @Entity
-@Table(schema = DatabaseConstants.HEY_ORANGE, name = "HISTORICO")
-public class Historico extends AbstractEntity<Long> {
+@Table(schema = DatabaseConstants.HEY_ORANGE, name = "HABILIDADE_USUARIO")
+public class HabilidadeUsuario extends AbstractEntity<Long> {
 
-	@Column(name = "DATA_CRIACAO")
-	private Timestamp dataCriacao;
+	@Column(name = "ID_USUARIO")
+	private Long idUsuario;
 
-	@Column(name = "DATA_ALTERACAO")
-	private Timestamp dataAlteracao;
-
-	@Column(name = "USUARIO_CRIACAO")
-	private String usuarioCriacao;
-
-	@Column(name = "USUARIO_ALTERACAO")
-	private String usuarioAlteracao;
-
-	@Column(name = "ID_DOMINIO_TIPO_ACAO")
-	private int idDominioTipoAcao;
+	@Column(name = "HABILIDADE_NOME")
+	private String nome;
 
 }
