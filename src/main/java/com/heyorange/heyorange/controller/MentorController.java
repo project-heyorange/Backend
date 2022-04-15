@@ -26,6 +26,7 @@ import com.heyorange.heyorange.service.MentorService;
 @RestController
 @RequestMapping("/mentor")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
+
 public class MentorController extends BaseController {
 
 	@Autowired
