@@ -34,9 +34,9 @@ pegar badges das tecnologias aqui: https://github.com/Ileriayo/markdown-badges#b
 
 
 ## :computer: Desenvolvedores
-|_Alexandre Lucca_|_Isadora Hoelscher_|_Joyce Caroline_|_Ruan Dias_|
-|---|---|---|---|
-|<img src="https://github.com/alexamorim17.png" width="140">|<img src="https://github.com/isahoelscher.png" width="140">|<img src="https://github.com/joyce-caroline.png" width="140">|<img src="https://github.com/ruandias.png" width="140">
+|_Alexandre Lucca_|_Ruan Dias_|
+|---|---|
+|<img src="https://github.com/alexamorim17.png" width="140">|<img src="https://github.com/ruandias.png" width="140">
   
 
 
